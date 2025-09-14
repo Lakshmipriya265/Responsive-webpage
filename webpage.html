@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<head>
+    <meta charset = "UTF-8">
+    <meta name="viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Responsive Web Page</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header{
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+            padding: 32px;
+            animation: fadeIn 2s ease-in;
+        }
+        header h1{
+            margin-bottom: 8px;
+        }
+        nav{
+            background: #333
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+        nav ul li{
+            margin: 0 16px;
+        }
+        nav ul li a{
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            padding: 8px 16px;
+            display: inline-block;
+        }
+        nav ul li a:hover{
+            color: #ffd700;
+        }
+        main{
+            display: flex;
+            gap: 24px;
+            padding: 24px;
+        }
+        section{
+            flex: 3;
+            background: white;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-bottom: 24px;
+        }
+        aside{
+            flex: 1;
+            background: #fff;
+            padding: 16px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .card-container{
+            display: flex;
+            gap: 16px;
+        }
+        .card{
+            background: #f4f4f4;
+            padding: 16px;
+            text-align: center;
+            flex: 1;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover{
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        form input, form textarea, form button{
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+        }
+        form button{
+            background: #2575fc;
+            color: azure;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        form button:hover{
+            background: #1a5edb;
+        }
+        footer{
+            text-align: center;
+            color: white;
+            padding: 16px;
+            background: #333;
+        }
+        @keyframes fadeIn{
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        @media(max-width:768px){
+            main{
+                flex-direction: column;
+            }
+            .card-container{
+               flex-direction: column;
+            }
+        }
+</style>
+<body>
+    <header>
+    <h1>My Portfolio</h1>
+    <p>Welcome to my personal webpage</p>
+  </header>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I am a web developer passionate about building interactive and responsive websites. This page demonstrates advanced CSS styling and responsive design.</p>
+    </section>
+    <section id="services">
+      <h2>My Services</h2>
+      <div class="card-container">
+        <div class="card">
+          <h3>Web Design</h3>
+          <p>Creating modern and attractive designs.</p>
+        </div>
+        <div class="card">
+          <h3>Development</h3>
+          <p>Building websites using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="card">
+          <h3>Responsive UI</h3>
+          <p>Making sure websites look good on all devices.</p>
+        </div>
+      </div>
+    </section>
+    <aside>
+      <h2>Quick Links</h2>
+      <ul>
+        <li><a href="#about">Learn About Me</a></li>
+        <li><a href="#services">View My Services</a></li>
+        <li><a href="#contact">Get In Touch</a></li>
+      </ul>
+    </aside>
+  </main>
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+   <footer>
+    <p>&copy; 2025 My Portfolio. All Rights Reserved.</p>
+  </footer>
+</body>
